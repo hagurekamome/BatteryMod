@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BatteryMod</string>
+    <string name="app_name_settings">バッテリー充電に関する設定</string>
+    <string name="app_desription">充電中のLED等に関する設定を変更するモジュールです</string>
+    <string name="preference_category_title_1">充電中のLEDの色</string>
+    <string name="full_battery_title">フルバッテリー時</string>
+    <string name="full_battery_dialog_title">フルバッテリー時のLEDの色</string>
+    <string name="full_battery_default_color">2</string>
+    <string name="middle_battery_title">ローバッテリー～フルバッテリー間</string>
+    <string name="middle_battery_dialog_title">ローバッテリー以上フルバッテリー未満のLEDの色</string>
+    <string name="middle_battery_default_color">5</string>
+    <string name="low_battery_title">ローバッテリー時</string>
+    <string name="low_battery_dialog_title">ローバッテリー時のLEDの色</string>
+    <string name="low_battery_default_color">1</string>
+    <string name="preference_category_title_2">バッテリー警告ダイアログ</string>
+    <string name="first_battery_warnning_title">ローバッテリー警告１回目</string>
+    <string name="first_battery_warnning_dialog_title">最初にローバッテリー警告が出るバッテリー残量(%)</string>
+    <string name="first_battery_warnning_default_value">15</string>
+    <string name="first_battery_warnning_format">%d％未満で警告を表示</string>
+    <string name="second_battery_warnning_title">ローバッテリー警告２回目</string>
+    <string name="second_battery_warnning_dialog_title">２回目の警告が出るバッテリー残量(%)</string>
+    <string name="second_battery_warnning_default_value">4</string>
+    <string name="second_battery_warnning_format">%d％未満で２回目の警告を表示</string>
+    <string name="close_battery_warnning_title">ローバッテリー警告が閉じる</string>
+    <string name="close_battery_warnning_dialog_title">ローバッテリー警告が閉じるバッテリー残量(%)</string>
+    <string name="close_battery_warnning_default_value">20</string>
+    <string name="close_battery_warnning_format">%d％以上で警告を消す</string>
+    <string name="preference_category_title_3">充電完了時のLED</string>
+    <string name="config_led_off_when_battery_fully_charged">充電完了時にLEDを消灯する</string>
+    <string name="led_on">充電完了時にLEDを消灯しません</string>
+    <string name="led_off">充電完了時にLEDを消灯します</string>
+</resources>
