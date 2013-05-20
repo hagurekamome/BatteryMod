@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:title="充電中のLEDに関する設定"
+        android:summary="充電中のLEDの色や充電完了時のLEDの状態の設定をします">
    <PreferenceCategory android:title="@string/preference_category_title_1">
       <ListPreference
       android:key = "full"
@@ -23,7 +25,17 @@
       android:entryValues="@array/entryValues"
       android:defaultValue="@string/low_battery_default_color"/>
     </PreferenceCategory>
-	<PreferenceCategory android:title="@string/preference_category_title_2">
+   	<PreferenceCategory android:title="@string/preference_category_title_3">
+   	    <CheckBoxPreference
+   	        android:key="config_led_off_when_battery_fully_charged"
+   	        android:title="@string/config_led_off_when_battery_fully_charged"
+   	        android:summaryOn="@string/led_off"
+   	        android:summaryOff="@string/led_on" />
+   	</PreferenceCategory>
+   </PreferenceScreen>
+    <PreferenceScreen android:title="バッテリー警告ダイアログ設定"
+        android:summary="バッテリー警告ダイアログの表示タイミングの設定をします">
+    	<PreferenceCategory android:title="@string/preference_category_title_2">
 	    <com.hagurekamome.batterymod.ValueSeekBarPreference
 	        android:key="lowbattery"
 	        android:title="@string/first_battery_warnning_title"
@@ -43,11 +55,5 @@
 			displayFormat="%d％以上で警告を消す"
             android:defaultValue="20" />
    	</PreferenceCategory>
-   	<PreferenceCategory android:title="@string/preference_category_title_3">
-   	    <CheckBoxPreference
-   	        android:key="config_led_off_when_battery_fully_charged"
-   	        android:title="@string/config_led_off_when_battery_fully_charged"
-   	        android:summaryOn="@string/led_off"
-   	        android:summaryOff="@string/led_on" />
-   	</PreferenceCategory>
+   </PreferenceScreen>
 </PreferenceScreen>

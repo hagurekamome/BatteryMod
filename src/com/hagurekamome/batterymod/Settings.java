@@ -1,11 +1,13 @@
 package com.hagurekamome.batterymod;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
+import android.widget.Toast;
 
 public class Settings extends Activity{
 	@Override
@@ -61,4 +63,10 @@ public class Settings extends Activity{
 						""));
 	}
 
+	
+	@Override
+	public void onDestroy(){
+		Toast.makeText(getApplication(), "İ’è‚Ì•ÏX‚Í’[––Ä‹N“®Œã‚É”½‰f‚³‚ê‚Ü‚·", Toast.LENGTH_SHORT).show();
+		super.onDestroy();
+	}
 }
