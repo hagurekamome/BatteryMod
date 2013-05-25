@@ -1,6 +1,5 @@
 package com.hagurekamome.batterymod;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.preference.ListPreference;
