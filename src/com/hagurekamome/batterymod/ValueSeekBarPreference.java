@@ -74,9 +74,7 @@ public class ValueSeekBarPreference extends Preference implements SeekBar.OnSeek
 		localSeekBar.setProgress((this.mProgress - this.mMin) / this.mStep);
 		TextView localTextView = this.tvValue;
 		String str = this.valueDisplayFormat;
-		Object[] arrayOfObject = new Object[1];
-		arrayOfObject[0] = Integer.valueOf(this.mProgress);
-		localTextView.setText(String.format(str, arrayOfObject));
+		localTextView.setText(String.format(str, this.mProgress));
 		localSeekBar.setEnabled(isEnabled());
 	}
 
@@ -100,9 +98,7 @@ public class ValueSeekBarPreference extends Preference implements SeekBar.OnSeek
 			syncProgress(paramSeekBar);
 		TextView localTextView = this.tvValue;
 		String str = this.valueDisplayFormat;
-		Object[] arrayOfObject = new Object[1];
-		arrayOfObject[0] = Integer.valueOf(paramInt * this.mStep + this.mMin);
-		localTextView.setText(String.format(str, arrayOfObject));
+		localTextView.setText(String.format(str, paramInt * this.mStep + this.mMin));
 	}
 
 	protected void onRestoreInstanceState(Parcelable paramParcelable)
