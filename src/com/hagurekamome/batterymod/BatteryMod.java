@@ -21,9 +21,11 @@ public class BatteryMod implements IXposedHookZygoteInit
 		final int criticalBattery = pref.getInt("criticalbattery",4);
 		final int clearWarnning = pref.getInt("clearwarnning",20);
 		final boolean led = pref.getBoolean("config_led_off_when_battery_fully_charged",false);
+		final boolean NavigationBar = true;
 		
 		try{
 			XResources.setSystemWideReplacement("android", "bool", "config_led_off_when_battery_fully_charged", led);
+			XResources.setSystemWideReplacement("android", "bool", "config_showNavigationBar", NavigationBar);
 			XResources.setSystemWideReplacement("android", "integer", "config_lowBatteryWarningLevel", warnningBattery);
 			XResources.setSystemWideReplacement("android", "integer", "config_criticalBatteryWarningLevel", criticalBattery);
 			XResources.setSystemWideReplacement("android", "integer", "config_lowBatteryCloseWarningLevel", clearWarnning);
@@ -31,7 +33,9 @@ public class BatteryMod implements IXposedHookZygoteInit
 			XResources.setSystemWideReplacement("android", "integer", "config_notificationsBatteryMediumARGB", colorArray[middleBattery]);
 			XResources.setSystemWideReplacement("android", "integer", "config_notificationsBatteryFullARGB", colorArray[fullBattery]);
 			XResources.setSystemWideReplacement("android", "integer", "config_MaxConcurrentDownloadsAllowed", 10);
-			XResources.setSystemWideReplacement("android", "array", "config_tether_bluetooth_regexs", new String[] { "bnep\\d" });
+
+//			XResources.setSystemWideReplacement("android", "array", "config_tether_bluetooth_regexs", new String[] { "bnep\\d" });
+
 			XResources.setSystemWideReplacement("android", "string", "twenty_four_hour_time_format", dateFormat);
 		} catch (Throwable t) {
 			XposedBridge.log(t);
